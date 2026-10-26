@@ -82,13 +82,9 @@ export default function SouvenirPage() {
           </div>
         </div>
 
-        {/* Official FlipHTML5 Embedded Flippable Book with Blurred & Blended Backdrop */}
-        <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-[#02040d] shadow-[0_25px_70px_rgba(0,0,0,0.9)] group">
-          {/* Ambient Colored Backlight around the reader */}
-          <div className="absolute -inset-2 bg-gradient-to-r from-blue-600/20 via-cyan-500/15 to-indigo-600/20 rounded-3xl blur-2xl -z-10 pointer-events-none" />
-
-          {/* FlipHTML5 iFrame Container */}
-          <div style={{ position: "relative", paddingTop: "max(60%, 360px)", width: "100%", height: 0 }}>
+        {/* Official FlipHTML5 Embedded Flippable Book (Default Viewer) */}
+        <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+          <div style={{ position: "relative", paddingTop: "max(60%, 324px)", width: "100%", height: 0 }}>
             <iframe
               style={{
                 position: "absolute",
@@ -103,35 +99,6 @@ export default function SouvenirPage() {
               seamless
               scrolling="no"
               allowFullScreen
-            />
-
-            {/* Layer 1: Radial Feathered Backdrop Blur on the gray player margins */}
-            <div
-              className="pointer-events-none absolute inset-0 z-10 backdrop-blur-[8px]"
-              style={{
-                maskImage:
-                  "radial-gradient(ellipse 65% 75% at center, transparent 42%, black 85%)",
-                WebkitMaskImage:
-                  "radial-gradient(ellipse 65% 75% at center, transparent 42%, black 85%)",
-              }}
-            />
-
-            {/* Layer 2: Deep Dark Cosmic Vignette Gradient Blending Gray into Website */}
-            <div
-              className="pointer-events-none absolute inset-0 z-10"
-              style={{
-                background:
-                  "radial-gradient(ellipse 70% 82% at center, transparent 48%, rgba(2, 4, 13, 0.45) 75%, rgba(2, 4, 13, 0.92) 98%)",
-              }}
-            />
-
-            {/* Layer 3: Perimeter Deep Inset Shadow */}
-            <div
-              className="pointer-events-none absolute inset-0 z-10"
-              style={{
-                boxShadow:
-                  "inset 0 0 60px 15px #02040d, inset 0 0 120px 40px rgba(2, 4, 13, 0.7)",
-              }}
             />
           </div>
         </div>
