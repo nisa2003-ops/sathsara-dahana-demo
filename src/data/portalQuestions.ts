@@ -49,8 +49,8 @@ export const PORTAL_QUESTIONS: PortalQuestion[] = [
   {
     id: 3,
     questionNumber: "03/03",
-    category: "CODEXIA CORE // SECTOR GAMMA",
-    title: "What is CODEXIA's core architectural protocol for synchronizing acoustic resonance with spatial reality?",
+    category: "SATHSARA CORE // SECTOR GAMMA",
+    title: "What is Sathsara Dahana's core architectural protocol for synchronizing acoustic resonance with spatial reality?",
     description: "The harmonic foundation bridging music, movement, and the continuum.",
     options: [
       { id: "A", label: "A", text: "Polyphonic Spatial Phase Modulation" },

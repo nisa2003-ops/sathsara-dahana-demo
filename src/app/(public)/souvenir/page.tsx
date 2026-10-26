@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function SouvenirPage() {
   return (
-    <div className="relative min-h-screen bg-[#02040d] text-white pt-24 pb-16 sm:pt-36 sm:pb-24 px-3 sm:px-6 overflow-hidden flex flex-col justify-between">
+    <div className="relative min-h-screen bg-[#02040d] text-white pt-20 pb-4 sm:pt-32 sm:pb-16 px-2.5 sm:px-6 overflow-hidden flex flex-col justify-between">
       <VortexBackground />
 
       {/* Atmospheric ambient lighting */}
@@ -35,7 +35,7 @@ export default function SouvenirPage() {
 
       <div className="relative z-10 w-full max-w-6xl mx-auto flex-1 flex flex-col">
         {/* Header bar */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-3 sm:mb-6 pb-3 sm:pb-4 border-b border-white/10">
           <div className="flex items-center gap-3">
             <Link
               href="/"
@@ -82,25 +82,16 @@ export default function SouvenirPage() {
           </div>
         </div>
 
-        {/* Official FlipHTML5 Embedded Flippable Book (Default Viewer) */}
-        <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
-          <div style={{ position: "relative", paddingTop: "max(60%, 324px)", width: "100%", height: 0 }}>
-            <iframe
-              style={{
-                position: "absolute",
-                border: "none",
-                width: "100%",
-                height: "100%",
-                left: 0,
-                top: 0,
-              }}
-              src="https://online.fliphtml5.com/otefy/woan/"
-              title="Sathsara Daehana 2026 - Sponsorship Souvenir (English)"
-              seamless
-              scrolling="no"
-              allowFullScreen
-            />
-          </div>
+        {/* Official FlipHTML5 Embedded Flippable Book (Responsive Full Viewport on Mobile & Desktop) */}
+        <div className="relative w-full flex-1 h-[68vh] h-[calc(100dvh-190px)] min-h-[500px] sm:min-h-[580px] md:min-h-[660px] max-h-[880px] rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+          <iframe
+            className="absolute inset-0 w-full h-full border-0"
+            src="https://online.fliphtml5.com/otefy/woan/"
+            title="Sathsara Daehana 2026 - Sponsorship Souvenir (English)"
+            scrolling="no"
+            allow="fullscreen; clipboard-read; clipboard-write"
+            allowFullScreen
+          />
         </div>
       </div>
     </div>

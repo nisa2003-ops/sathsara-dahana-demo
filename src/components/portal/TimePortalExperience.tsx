@@ -60,7 +60,7 @@ export const TimePortalExperience: React.FC = () => {
             <ArrowLeft size={16} />
           </div>
           <span className="font-cinzel text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em]">
-            CODEXIA <span className="text-cyan-400 hidden xs:inline">{"// EXIT TO MAIN SITE"}</span>
+            SATHSARA DAHANA <span className="text-cyan-400 hidden xs:inline">{"// EXIT TO MAIN SITE"}</span>
           </span>
         </Link>
 

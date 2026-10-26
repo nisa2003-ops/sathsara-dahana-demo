@@ -56,7 +56,7 @@ export const DimensionDestination: React.FC = () => {
             <ArrowLeft size={16} />
           </div>
           <span className="font-cinzel text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em]">
-            CODEXIA <span className="text-cyan-400 hidden xs:inline">{"// SATHSARA DAHANA"}</span>
+            SATHSARA DAHANA <span className="text-cyan-400 hidden xs:inline">{"// MAIN SITE"}</span>
           </span>
         </Link>
 
@@ -169,7 +169,7 @@ export const DimensionDestination: React.FC = () => {
               className="w-full sm:w-auto px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-400 to-sky-300 text-black font-cinzel font-bold text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] shadow-[0_0_35px_rgba(56,189,248,0.5)] hover:shadow-[0_0_50px_rgba(56,189,248,0.8)] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer group"
             >
               <Globe size={16} className="group-hover:rotate-12 transition-transform" />
-              <span>RETURN TO CODEXIA WEBSITE</span>
+              <span>RETURN TO SATHSARA DAHANA</span>
             </Link>
 
             <Link
@@ -185,7 +185,7 @@ export const DimensionDestination: React.FC = () => {
 
       {/* Bottom Status Bar */}
       <footer className="relative z-30 w-full px-4 py-3 md:px-12 md:py-4 flex flex-col sm:flex-row items-center justify-between border-t border-white/5 text-[10px] sm:text-[11px] font-mono text-white/40">
-        <div>{"CODEXIA TEMPORAL ENGINE v2.4 // ALL RIGHTS RESERVED"}</div>
+        <div>{"SATHSARA DAHANA TEMPORAL ENGINE v2.4 // ALL RIGHTS RESERVED"}</div>
         <div className="mt-1 sm:mt-0">{"SECURE DIMENSIONAL TUNNEL // 0 LATENCY"}</div>
       </footer>
     </div>
