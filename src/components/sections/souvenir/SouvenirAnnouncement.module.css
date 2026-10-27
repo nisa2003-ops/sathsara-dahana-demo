@@ -1,0 +1,378 @@
+.dialog {
+  position: fixed;
+  inset: 0;
+  width: min(420px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 24px;
+  background: #050b1c;
+  color: #fff;
+  box-shadow: 0 32px 120px rgba(0, 0, 0, 0.8), 0 0 90px rgba(56, 189, 248, 0.2);
+  overscroll-behavior: contain;
+}
+
+.dialog[open] {
+  animation: reveal 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.dialog::backdrop {
+  background: rgba(2, 4, 13, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.dialog[open]::backdrop {
+  animation: fadeIn 400ms ease both;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.spotlights {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 18%, rgba(56, 189, 248, 0.25), transparent 55%),
+    radial-gradient(ellipse at 85% 60%, rgba(37, 99, 235, 0.2), transparent 50%),
+    conic-gradient(from 148deg at 10% -8%, transparent 0deg, rgba(56, 189, 248, 0.1) 14deg, transparent 28deg),
+    conic-gradient(from 188deg at 90% -8%, transparent 0deg, rgba(56, 189, 248, 0.1) 14deg, transparent 28deg),
+    linear-gradient(150deg, #0b1733, #050b1c 65%);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #a8b8d1;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.content {
+  position: relative;
+  padding: 26px 26px 12px;
+  text-align: center;
+  z-index: 2;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 999px;
+  color: #7dd3fc;
+  background: rgba(14, 165, 233, 0.1);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.eyebrow > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.bookPreviewWrapper {
+  margin: 18px auto 14px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.bookGlow {
+  position: absolute;
+  inset: -12px;
+  border-radius: 16px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(37, 99, 235, 0.15) 50%, transparent 75%);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+.bookCard {
+  position: relative;
+  width: 104px;
+  aspect-ratio: 1192 / 1686;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), 0 0 25px rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: perspective(600px) rotateY(-8deg) rotateX(4deg);
+  transition: transform 300ms ease;
+}
+
+.bookCard:hover {
+  transform: perspective(600px) rotateY(0deg) rotateX(0deg) scale(1.04);
+}
+
+.kicker {
+  margin: 6px 0 6px;
+  color: #fcd88b;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.title {
+  font-family: var(--font-cinzel), serif;
+  font-size: clamp(34px, 9vw, 42px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.title > span {
+  color: #38bdf8;
+  text-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+}
+
+.description {
+  max-width: 320px;
+  margin: 10px auto 0;
+  color: #b2bfd5;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 12px;
+  margin: 12px 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.badges li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  color: #7dd3fc;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.badges svg {
+  color: #38bdf8;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(110deg, #38bdf8, #2563eb);
+  color: #030713;
+  font-family: var(--font-cinzel), serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 36px rgba(56, 189, 248, 0.65);
+  background: linear-gradient(110deg, #7dd3fc, #38bdf8);
+}
+
+.cta svg {
+  transition: transform 200ms ease;
+}
+
+.cta:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.later {
+  min-height: 40px;
+  margin-top: 4px;
+  padding: 8px 16px;
+  color: #a3b6d6;
+  font-size: 12px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: color 180ms ease;
+}
+
+.later:hover {
+  color: #fff;
+}
+
+.close:focus-visible,
+.cta:focus-visible,
+.later:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 4px;
+}
+
+.ticketFooter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 13px 20px;
+  border-top: 1px dashed rgba(56, 189, 248, 0.25);
+  color: #91a6c6;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: rgba(3, 7, 19, 0.5);
+}
+
+.ticketFooter::before,
+.ticketFooter::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 50%;
+  background: #050b1c;
+}
+
+.ticketFooter::before {
+  left: -10px;
+}
+
+.ticketFooter::after {
+  right: -10px;
+}
+
+.ticketFooter > span:first-child {
+  color: #7dd3fc;
+  font-family: var(--font-cinzel), serif;
+}
+
+.ticketFooter > span > span {
+  margin: 0 5px;
+  color: #fcd88b;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+@media (max-width: 420px) {
+  .content {
+    padding: 22px 18px 10px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .bookCard {
+    width: 92px;
+  }
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.16em;
+  }
+  .badges {
+    gap: 6px 10px;
+  }
+  .ticketFooter {
+    justify-content: center;
+    padding: 12px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog[open],
+  .dialog[open]::backdrop,
+  .eyebrow > span {
+    animation: none;
+  }
+  .cta,
+  .cta svg,
+  .bookCard {
+    transition: none;
+  }
+  .cta:hover,
+  .cta:hover svg,
+  .bookCard:hover {
+    transform: none;
+  }
+}

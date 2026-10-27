@@ -1,5 +1,5 @@
 import Hero from "../../components/sections/hero/Hero";
-import ResultsAnnouncement from "../../components/results/ResultsAnnouncement";
+import SouvenirAnnouncement from "../../components/sections/souvenir/SouvenirAnnouncement";
 import { SouvenirBanner } from "../../components/sections/souvenir/SouvenirBanner";
 // import Countdown from "../../components/sections/countdown/Countdown";
 import Timeline from "../../components/sections/timeline/Timeline";
@@ -11,7 +11,7 @@ import Introduction from "../../components/sections/introduction/Introduction";
 export default function Home() {
   return (
     <>
-      <ResultsAnnouncement />
+      <SouvenirAnnouncement />
       <Hero />
       {/* <Countdown /> */}
       {/* Souvenir Announcement before Introduction Section */}

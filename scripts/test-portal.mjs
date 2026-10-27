@@ -55,5 +55,5 @@ test("4. Portal Components & Expansion Lifecycle", () => {
   const destinationPath = path.join(root, "src", "components", "portal", "DimensionDestination.tsx");
   const destinationContent = fs.readFileSync(destinationPath, "utf8");
   assert.match(destinationContent, /YOU HAVE ENTERED ANOTHER DIMENSION/, "Destination should display welcome message");
-  assert.match(destinationContent, /RETURN TO CODEXIA WEBSITE/, "Destination should have return button");
+  assert.match(destinationContent, /RETURN TO SATHSARA DAHANA/, "Destination should have return button");
 });

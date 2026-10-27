@@ -36,7 +36,7 @@ export const SouvenirBanner: React.FC = () => {
               </h2>
 
               <p className="text-xs sm:text-base text-cyan-100/70 max-w-xl mx-auto lg:mx-0 font-sans leading-relaxed mb-6 sm:mb-8">
-                The official Sathsara Dahana 2026 Sponsorship Souvenir is now live. Experience our musical vision, cultural lineup, and faculty legacy in an interactive 3D flippable digital book.
+                The official Sathsara Dahana 2026 Sponsorship Souvenir is now live. Discover our musical vision, cultural legacy, and partnership opportunities.
               </p>
 
               {/* Action Buttons */}
