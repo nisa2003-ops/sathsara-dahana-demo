@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { BookOpen, ExternalLink, Download, Sparkles, ArrowRight } from "lucide-react";
+import { BookOpen, ExternalLink, Sparkles, ArrowRight } from "lucide-react";
 
 export const SouvenirBanner: React.FC = () => {
   return (
@@ -36,7 +36,7 @@ export const SouvenirBanner: React.FC = () => {
               </h2>
 
               <p className="text-xs sm:text-base text-cyan-100/70 max-w-xl mx-auto lg:mx-0 font-sans leading-relaxed mb-6 sm:mb-8">
-                The official Sathsara Dahana 2026 Sponsorship Souvenir is now live. Discover our musical vision, cultural legacy, and partnership opportunities.
+                The official Sathsara Dahana 2026 E-Souvenir is now live. Discover our musical vision, cultural legacy, and celebration of the arts.
               </p>
 
               {/* Action Buttons */}
@@ -61,17 +61,6 @@ export const SouvenirBanner: React.FC = () => {
                 >
                   <ExternalLink size={15} />
                   <span>Open in New Tab</span>
-                </a>
-
-                {/* Download PDF button */}
-                <a
-                  href="/Sathsara Daehana 2026 - Sponsorship Souvenir (English).pdf"
-                  download="Sathsara_Dahana_2026_Souvenir.pdf"
-                  className="px-4 py-3 rounded-xl text-white/50 hover:text-cyan-300 hover:bg-white/5 transition-all text-xs font-mono tracking-wider flex items-center justify-center gap-1.5 cursor-pointer text-center"
-                  title="Download PDF directly"
-                >
-                  <Download size={14} />
-                  <span>PDF (595 KB)</span>
                 </a>
               </div>
             </div>

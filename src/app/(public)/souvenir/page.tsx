@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Download, ExternalLink, BookOpen } from "lucide-react";
+import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import VortexBackground from "@/src/components/ui/VortexBackground";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Sponsorship Souvenir 2026 | Sathsara Dahana",
-  description: "Browse the official Sathsara Dahana 2026 Sponsorship Souvenir on FlipHTML5.",
+  title: "E-Souvenir 2026 | Sathsara Dahana",
+  description: "Browse the official Sathsara Dahana 2026 E-Souvenir on FlipHTML5.",
   openGraph: {
-    title: "Sathsara Dahana 2026 — Sponsorship Souvenir",
+    title: "Sathsara Dahana 2026 — E-Souvenir",
     description: "Browse our official event souvenir online.",
   },
 };
 
 export default function SouvenirPage() {
   return (
-    <div className="relative min-h-screen bg-[#02040d] text-white pt-20 pb-4 sm:pt-32 sm:pb-16 px-2.5 sm:px-6 overflow-hidden flex flex-col justify-between">
+    <div className="relative min-h-screen bg-[#02040d] text-white pt-20 pb-8 sm:pt-32 sm:pb-16 px-2.5 sm:px-6 overflow-hidden flex flex-col justify-between">
       <VortexBackground />
 
       {/* Atmospheric ambient lighting */}
@@ -35,7 +35,7 @@ export default function SouvenirPage() {
 
       <div className="relative z-10 w-full max-w-6xl mx-auto flex-1 flex flex-col">
         {/* Header bar */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-3 sm:mb-6 pb-3 sm:pb-4 border-b border-white/10">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-white/10">
           <div className="flex items-center gap-3">
             <Link
               href="/"
@@ -47,7 +47,7 @@ export default function SouvenirPage() {
             <BookOpen className="text-cyan-400 shrink-0" size={22} />
             <div>
               <h1 className="text-base sm:text-2xl font-cinzel font-bold text-white tracking-wider uppercase">
-                Sponsorship Souvenir 2026
+                E-Souvenir 2026
               </h1>
               <div className="flex items-center gap-2 mt-0.5">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
@@ -60,38 +60,39 @@ export default function SouvenirPage() {
 
           <div className="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-end">
             <a
-              href="https://online.fliphtml5.com/otefy/woan/"
+              href="https://online.fliphtml5.com/otefy/E-Souvenir/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-cyan-400/50 text-xs font-cinzel tracking-wider text-white/80 hover:text-white transition-all cursor-pointer"
+              className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-cyan-400/50 text-xs font-cinzel tracking-wider text-white/80 hover:text-white transition-all cursor-pointer"
               title="Open directly in FlipHTML5"
             >
               <ExternalLink size={14} className="text-cyan-400" />
               <span>Full Screen</span>
             </a>
-
-            <a
-              href="/Sathsara Daehana 2026 - Sponsorship Souvenir (English).pdf"
-              download="Sathsara_Dahana_2026_Souvenir.pdf"
-              className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-black font-semibold hover:brightness-110 text-xs font-cinzel tracking-wider transition-all cursor-pointer shadow-[0_0_20px_rgba(56,189,248,0.3)]"
-              title="Download Original PDF"
-            >
-              <Download size={14} />
-              <span>Download PDF</span>
-            </a>
           </div>
         </div>
 
-        {/* Official FlipHTML5 Embedded Flippable Book (Responsive Full Viewport on Mobile & Desktop) */}
-        <div className="relative w-full flex-1 h-[68vh] h-[calc(100dvh-190px)] min-h-[500px] sm:min-h-[580px] md:min-h-[660px] max-h-[880px] rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
-          <iframe
-            className="absolute inset-0 w-full h-full border-0"
-            src="https://online.fliphtml5.com/otefy/woan/"
-            title="Sathsara Daehana 2026 - Sponsorship Souvenir (English)"
-            scrolling="no"
-            allow="fullscreen; clipboard-read; clipboard-write"
-            allowFullScreen
-          />
+        {/* Official FlipHTML5 Embedded Flippable Book */}
+        <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+          <div style={{ position: "relative", paddingTop: "max(60%, 324px)", width: "100%", height: 0 }}>
+            <iframe
+              style={{
+                position: "absolute",
+                border: "none",
+                width: "100%",
+                height: "100%",
+                left: 0,
+                top: 0,
+              }}
+              src="https://online.fliphtml5.com/otefy/E-Souvenir/"
+              title="E Souvenir"
+              seamless
+              scrolling="no"
+              frameBorder="0"
+              allow="fullscreen; clipboard-read; clipboard-write"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
     </div>

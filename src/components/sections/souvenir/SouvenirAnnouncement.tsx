@@ -91,7 +91,7 @@ export default function SouvenirAnnouncement() {
             <div className={styles.bookCard}>
               <Image
                 src="/souvenir/page-1.jpg"
-                alt="Sathsara Dahana 2026 Sponsorship Souvenir Cover"
+                alt="Sathsara Dahana 2026 E-Souvenir Cover"
                 fill
                 sizes="104px"
                 className="object-cover"
@@ -108,7 +108,7 @@ export default function SouvenirAnnouncement() {
           </h2>
 
           <p id="souvenir-announcement-description" className={styles.description}>
-            Explore the official Sathsara Dahana 2026 Sponsorship Souvenir. Discover our musical vision, cultural legacy, and partnership opportunities.
+            Explore the official Sathsara Dahana 2026 E-Souvenir. Discover our musical vision, cultural legacy, and celebration of the arts.
           </p>
 
           <ul className={styles.badges} aria-label="Souvenir features">
@@ -135,7 +135,7 @@ export default function SouvenirAnnouncement() {
         <div className={styles.ticketFooter}>
           <span>Sathsara Dahana</span>
           <span>
-            2026 <span aria-hidden="true">✦</span> Sponsorship Souvenir
+            2026 <span aria-hidden="true">✦</span> E-Souvenir
           </span>
         </div>
       </div>
