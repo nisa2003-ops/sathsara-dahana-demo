@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
+import { ArrowLeft, BookOpen } from "lucide-react";
 import VortexBackground from "@/src/components/ui/VortexBackground";
+import FlipHTML5Embed from "./FlipHTML5Embed";
 
 export const dynamic = "force-dynamic";
 
@@ -35,7 +36,7 @@ export default function SouvenirPage() {
 
       <div className="relative z-10 w-full max-w-6xl mx-auto flex-1 flex flex-col">
         {/* Header bar */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-white/10">
+        <div className="flex items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-white/10">
           <div className="flex items-center gap-3">
             <Link
               href="/"
@@ -57,43 +58,10 @@ export default function SouvenirPage() {
               </div>
             </div>
           </div>
-
-          <div className="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-end">
-            <a
-              href="https://online.fliphtml5.com/otefy/E-Souvenir/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-cyan-400/50 text-xs font-cinzel tracking-wider text-white/80 hover:text-white transition-all cursor-pointer"
-              title="Open directly in FlipHTML5"
-            >
-              <ExternalLink size={14} className="text-cyan-400" />
-              <span>Full Screen</span>
-            </a>
-          </div>
         </div>
 
-        {/* Official FlipHTML5 Embedded Flippable Book */}
-        <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
-          <div style={{ position: "relative", paddingTop: "max(60%, 324px)", width: "100%", height: 0 }}>
-            <iframe
-              style={{
-                position: "absolute",
-                border: "none",
-                width: "100%",
-                height: "100%",
-                left: 0,
-                top: 0,
-              }}
-              src="https://online.fliphtml5.com/otefy/E-Souvenir/"
-              title="E Souvenir"
-              seamless
-              scrolling="no"
-              frameBorder="0"
-              allow="fullscreen; clipboard-read; clipboard-write"
-              allowFullScreen
-            />
-          </div>
-        </div>
+        {/* Official FlipHTML5 Embedded Flippable Book (Mobile & Desktop Responsive) */}
+        <FlipHTML5Embed />
       </div>
     </div>
   );
