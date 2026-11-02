@@ -28,8 +28,8 @@ export default function FlipHTML5Embed() {
     viewMode === "single" || (viewMode === "auto" && isMobileDevice);
 
   const iframeSrc = isSinglePage
-    ? "https://online.fliphtml5.com/otefy/E-Souvenir/?phone=true"
-    : "https://online.fliphtml5.com/otefy/E-Souvenir/";
+    ? "https://online.fliphtml5.com/otefy/E-Souvenir-kCzl/?phone=true"
+    : "https://online.fliphtml5.com/otefy/E-Souvenir-kCzl/";
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -103,15 +103,20 @@ export default function FlipHTML5Embed() {
         <iframe
           key={iframeSrc}
           src={iframeSrc}
-          title="Sathsara Dahana 2026 E-Souvenir"
+          title="E Souvenir"
           className="w-full h-full border-none absolute inset-0"
           style={{
+            position: "absolute",
+            border: "none",
             width: "100%",
             height: "100%",
-            border: "none",
+            left: 0,
+            top: 0,
           }}
           seamless
           scrolling="no"
+          frameBorder="0"
+          allowTransparency={true}
           allow="fullscreen; clipboard-read; clipboard-write"
           allowFullScreen
         />
