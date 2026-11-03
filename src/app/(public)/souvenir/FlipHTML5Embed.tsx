@@ -28,8 +28,8 @@ export default function FlipHTML5Embed() {
     viewMode === "single" || (viewMode === "auto" && isMobileDevice);
 
   const iframeSrc = isSinglePage
-    ? "https://online.fliphtml5.com/otefy/E-Souvenir-kCzl/?phone=true"
-    : "https://online.fliphtml5.com/otefy/E-Souvenir-kCzl/";
+    ? "https://online.fliphtml5.com/otefy/E-Souvenir-3Ct4/?phone=true"
+    : "https://online.fliphtml5.com/otefy/E-Souvenir-3Ct4/";
 
   return (
     <div className="w-full flex flex-col items-center">
